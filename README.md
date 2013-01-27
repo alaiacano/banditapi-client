@@ -9,3 +9,7 @@ Features that work so far:
 Features that haven't been implemented yet:
 
 * create a new test
+
+### Installing
+
+Just include the `bandits.py` file wherever you need it.
