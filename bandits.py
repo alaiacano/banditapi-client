@@ -26,8 +26,11 @@ class BanditAPI(object):
         }
         return params
 
-    def select_arm(self):
-        return requests.get(self.SELECT_ARM_ROUTE, params={'test_id': self.test_id}).json
+    def select_arm(self, user_id=None):
+        params = {'test_id': self.test_id}
+        if user_id is not None:
+            params['user_id'] = user_id
+        return requests.get(self.SELECT_ARM_ROUTE, params=params).json
 
     def info(self):
         return requests.get(self.INFO_ROUTE, params={'test_id': self.test_id}).json
