@@ -1,7 +1,7 @@
 from bandits import BanditAPI
 
-PUBLIC_KEY = '83e4f11db51ab7b274d60f3c0d99ca8166a1fe18'
-PRIVATE_KEY = '6c3bede5e48427356ee08d80aaf16114e7314417'
+PUBLIC_KEY = 'public_key'
+PRIVATE_KEY = 'private_key'
 
 B = BanditAPI(
     'my_test2',
