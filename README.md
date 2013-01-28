@@ -29,4 +29,6 @@ B.update(chosen_arm['arm'], 0.0)
 
 ### Installing
 
-Just include the `bandits.py` file wherever you need it.
+The only dependency is the [requests](http://docs.python-requests.org/en/latest/) python package. You can install that with the command `pip install requests` or `easy_install requests`.
+
+Aside from that, just include the `bandits.py` file wherever you need it.
