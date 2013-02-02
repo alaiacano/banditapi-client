@@ -5,10 +5,7 @@ Features that work so far:
 * getting info on a running test
 * selecting an arm to display
 * updating the algorithm with the test results
-
-Features that haven't been implemented yet:
-
-* create a new test
+* create a new test of one of the supported algorithms (see the [documentation](http://banditapi.herokuapp.com/docs) for a list).
 
 ### Usage
 
