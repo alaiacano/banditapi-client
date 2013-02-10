@@ -26,10 +26,22 @@ class BanditAPI(object):
         }
         return params
 
-    def select_arm(self, user_id=None):
+    def select_arm(self, user_id=None, default_value=None, lifetime=None):
         params = {'test_id': self.test_id}
         if user_id is not None:
             params['user_id'] = user_id
+        try:
+            default_value = float(default_value)
+            params['default_value'] = default_value
+        except:
+            pass
+
+        try:
+            lifetime = float(lifetime)
+            params['lifetime'] = lifetime
+        except:
+            pass
+
         return requests.get(self.SELECT_ARM_ROUTE, params=params).json
 
     def info(self):
