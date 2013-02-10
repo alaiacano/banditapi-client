@@ -11,6 +11,7 @@ class BanditAPI(object):
     INFO_ROUTE = BASE_ROUTE + '/info'
     SELECT_ARM_ROUTE = BASE_ROUTE + '/select_arm'
     UPDATE_ROUTE = BASE_ROUTE + '/update'
+    HEARTBEAT_ROUTE = BASE_ROUTE + '/heartbeat'
 
     def __init__(self, test_id, public_key, private_key):
         self.public_key = public_key
@@ -142,6 +143,22 @@ class BanditAPI(object):
             'gamma': gamma
         }
         return self._initialize_test(params)
+
+    def heartbeat(self, instance_id, lifetime, default_value=None):
+        """
+        Adds another (lifetime) seconds to the life of the test instance.
+
+        If a default_value parameter is not supplied, the original value will
+        still be used.
+        """
+        params = self.__authenticate()
+        params['test_id'] = self.test_id
+        params['instance_id'] = instance_id
+        params['lifetime'] = float(lifetime)
+        if default_value is not None:
+            params['default_value'] = float(default_value)
+        return requests.post(self.HEARTBEAT_ROUTE, params).json
+
 
     def _initialize_test(self, params):
         """
