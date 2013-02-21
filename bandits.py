@@ -6,7 +6,7 @@ import sha
 class BanditAPI(object):
 
     # Routes
-    BASE_ROUTE = 'http://banditapi.herokuapp.com/api'
+    BASE_ROUTE = 'http://www.sifter.cc/api'
     INIT_ROUTE = BASE_ROUTE + '/init'
     INFO_ROUTE = BASE_ROUTE + '/info'
     SELECT_ARM_ROUTE = BASE_ROUTE + '/select_arm'
