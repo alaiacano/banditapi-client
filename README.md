@@ -1,11 +1,11 @@
-I created an API for running website tests using bandit algorithms. There is much more info at [http://banditapi.herokuapp.com](http://banditapi.herokuapp.com). This is a python client library for accessing the API.
+`Sifter` is an API for running website tests using bandit algorithms. There is much more info at [www.sifter.cc](http://www.sifter.cc). This is a python client library for accessing the API.
 
 Features that work so far:
 
 * getting info on a running test
 * selecting an arm to display
 * updating the algorithm with the test results
-* create a new test of one of the supported algorithms (see the [documentation](http://banditapi.herokuapp.com/docs) for a list).
+* create a new test of one of the supported algorithms (see the [documentation](http://www.sifter.cc/docs) for a list).
 
 ### Usage
 
