@@ -46,7 +46,9 @@ class BanditAPI(object):
         return requests.get(self.SELECT_ARM_ROUTE, params=params).json
 
     def info(self):
-        return requests.get(self.INFO_ROUTE, params={'test_id': self.test_id}).json
+        params = self.__authenticate()
+        params['test_id'] = self.test_id
+        return requests.get(self.INFO_ROUTE, params=params).json
 
     def update(self, arm, reward):
         params = self.__authenticate()
